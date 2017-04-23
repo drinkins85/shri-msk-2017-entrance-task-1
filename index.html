@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/styles.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/modal-window.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/schedule-filter.css" type="text/css" rel="stylesheet" media="all">
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Y</title>
+</head>
+<body>
+<div class="container">
+
+  <h1>
+      Расписание лекций
+  </h1>
+
+    <div class="schedule-table__row horisontal-line_color_gray">
+        <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+            <select class="select input_size_xl" data-filter-type="month">
+                <option value="">Месяц</option>
+                <option value="апреля">Апрель</option>
+                <option value="мая">Май</option>
+                <option value="июня">Июнь</option>
+            </select>
+        </div>
+        <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_l ">
+            <select class="select input_size_xl" data-filter-type="school">
+                <option value="">Школа</option>
+                <option value="ШРИ">Школа разработки интерфейсов</option>
+                <option value="ШМД">Школа мобильного дизайна</option>
+                <option value="ШМР">Школа мобильной разработки</option>
+            </select>
+        </div>
+        <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_l ">
+            <select class="select input_size_xl" data-filter-type="prep">
+                <option value="">Преподаватель</option>
+                <option value="Андрей Морозов">Андрей Морозов</option>
+                <option value="Дмитрий Душкин">Дмитрий Душкин</option>
+                <option value="Максим Васильев">Максим Васильев</option>
+                <option value="Сергей Бережной">Сергей Бережной</option>
+                <option value="Прокопюк Андрей">Прокопюк Андрей</option>
+                <option value="Иван Карев">Иван Карев</option>
+            </select>
+        </div>
+        <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_l ">
+            <a class="button button_color-sheme_gray hidden" data-action="reset-filter" >Сбросить фильтр</a>
+        </div>
+    </div>
+
+    <div class="schedule-table" data-type="filtered-content">
+
+        <div class="schedule-table__row">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+                <span class="schedule-table__date">8</span>
+                <span class="schedule-table__month" data-type="month">апреля</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection link_noactive">Лекция 1. Адаптивная вёрстка</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильного дизайна"> ШМД</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/dmitriy_dushkin.html" class="schedule-table__link_type_prep modal" data-type="prep" data-modal="ajax">Дмитрий Душкин</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <a class="button button_video button_color-sheme_gray">Смотреть</a>
+            </div>
+        </div>
+
+        <div class="schedule-table__row horisontal-line_color_gray">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+                <span class="schedule-table__date">23</span>
+                <span class="schedule-table__month" data-type="month">апреля</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection link_noactive">Лекция 2. Работа с сенсорным пользовательским вводом</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/dmitriy_dushkin.html" class="schedule-table__link_type_prep modal" data-type="prep" data-modal="ajax">Дмитрий Душкин</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <a class="button button_video button_color-sheme_gray">Смотреть</a>
+            </div>
+        </div>
+
+
+
+        <div class="schedule-table__row">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+                <span class="schedule-table__date">1</span>
+                <span class="schedule-table__month" data-type="month">мая</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection link_noactive">Лекция 3. Мультимедиа: возможности браузера</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильного дизайна"> ШМД</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/maxim_vasiljev.html" class="schedule-table__link_type_prep" data-type="prep" data-modal="ajax" >Максим Васильев</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <a class="button button_video button_color-sheme_gray">Смотреть</a>
+            </div>
+        </div>
+
+        <div class="schedule-table__row">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+                <span class="schedule-table__date">14</span>
+                <span class="schedule-table__month" data-type="month">мая</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection">Лекция 4. Нативные приложения на веб-технологиях</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильной разработки" > ШМД</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/sergei_berejnoi.html" class="schedule-table__link_type_prep" data-type="prep" data-modal="ajax">Сергей Бережной</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <span class="schedule-table__location-label">Аудитория:</span><a href="#contacts" class="schedule-table__link_type_location" data-modal="inline">Синий кит</a>
+            </div>
+        </div>
+
+        <div class="schedule-table__row horisontal-line_color_gray">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m">
+                <span class="schedule-table__date">21</span>
+                <span class="schedule-table__month" data-type="month">мая</span></div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection">Лекция 5. Клиентская оптимизация: базовые знания и лучшие практики</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильной разработки" > ШМД</a>
+                <a class="schedule-table__school schedule-table__school_circle" data-type="school" title="Школа мобильного дизайна"> ШМР</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/andrei_morozov.html" class="schedule-table__link_type_prep modal" data-type="prep" data-modal="ajax">Андрей Морозов</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <span class="schedule-table__location-label">Аудитория:</span><a href="#contacts" class="schedule-table__link_type_location" data-modal="inline">Синий кит</a>
+            </div>
+        </div>
+
+
+        <div class="schedule-table__row">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+                <span class="schedule-table__date">11</span>
+                <span class="schedule-table__month" data-type="month">июня</span></div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection">Лекция 6. Клиентская оптимизация: мобильные устройства и инструменты</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильной разработки" > ШМД</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/ivan_karev.html" class="schedule-table__link_type_prep" data-type="prep" data-modal="ajax">Иван Карев</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <span class="schedule-table__location-label">Аудитория:</span><a href="#contacts" class="schedule-table__link_type_location" data-modal="inline">Экстрополис</a>
+            </div>
+        </div>
+
+        <div class="schedule-table__row">
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m ">
+                <span class="schedule-table__date">23</span>
+                <span class="schedule-table__month" data-type="month">июня</span></div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection">Лекция 7. Инфраструктура веб-проектов</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильной разработки" > ШМД</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/prokopjuk_andrei.html" class="schedule-table__link_type_prep" data-type="prep" data-modal="ajax">Прокопюк Андрей</a>
+                <span class="schedule-table__prep-info">Яндекс</span>
+                <span class="schedule-table__location-label">Аудитория:</span> <a href="#contacts" class="schedule-table__link_type_location" data-modal="inline">Синий кит</a>
+            </div>
+        </div>
+
+        <div class="schedule-table__row horisontal-line_color_gray" >
+            <div class="schedule-table__col schedule-table__col-date schedule-table__col_size_m">
+                <span class="schedule-table__date">30</span>
+                <span class="schedule-table__month" data-type="month">июня</span></div>
+            <div class="schedule-table__col schedule-table__col-time schedule-table__col_size_s">
+                <span class="schedule-table__time-from">19:00</span> <span class="schedule-table__time-to">21:00</span>
+            </div>
+            <div class="schedule-table__col schedule-table__col-lection schedule-table__col_size_xl " >
+                <a href="#" class="schedule-table__link_type_lection">Лекция 8. Инструменты разработки мобильного фронтенда</a>
+                <a class="schedule-table__school schedule-table__school_triangle" data-type="school" title="Школа разработки интерфейсов"> ШРИ</a>
+                <a class="schedule-table__school schedule-table__school_square" data-type="school" title="Школа мобильной разработки" > ШМД</a>
+                <a class="schedule-table__school schedule-table__school_circle" data-type="school" title="Школа разработки интерфейсов"> ШМР</a>
+            </div>
+            <div class="schedule-table__col schedule-table__col-prep schedule-table__col_size_l">
+                <a href="teachers/prokopjuk_andrei.html" class="schedule-table__link_type_prep" data-type="prep" data-modal="ajax">Прокопюк Андрей</a>
+                <span class="schedule-table__prep-info">Яндекс</span><br>
+                <span class="schedule-table__location-label">Аудитория:</span><a href="#contacts" class="schedule-table__link_type_location" data-modal="inline">Экстрополис</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="hidden">
+        <div id="contacts">
+            <div class="text-container">
+                <h1>Как добраться</h1>
+                <h2>Пешеходам</h2>
+                Проезд до станции метро «Парк культуры» (кольцевая). Из дверей метро нужно повернуть направо и идти по Комсомольскому проспекту около 250 метров.
+                Второй поворот направо — на улицу Тимура Фрунзе. По ней нужно дойти до красного кирпичного здания с табличкой «дом 11, стр 2-5», шлагбаумом и указателями с логотипом Яндекса.
+                За шлагбаумом находится широкая лестница, по которой нужно подняться и повернуть направо. Первая дверь под аркой — вход в офис. Следующий подъезд — для курьеров. Если же вам нужно попасть в Яндекс.Деньги, пройдите по улице Льва Толстого немного дальше — до дома 18Б.
+                <h2>Автомобилистам</h2>
+                Подъехать к офису Яндекса можно по улице Льва Толстого или Тимура Фрунзе, ориентируясь на указатели с логотипом компании.
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hidden">
+
+        <div id="forXHR">
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<script src="js/modal.js"></script>
+<script src="js/schedule-filter.js"></script>
+
+</body>
+</html>
